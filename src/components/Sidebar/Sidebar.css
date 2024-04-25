@@ -1,0 +1,41 @@
+.sidebar {
+  @apply h-screen flex-col justify-between bg-[#f0f4f9] py-[25px] px-[15px] overflow-hidden hidden md:inline-flex;
+}
+
+.sidebar img {
+  @apply w-[20px];
+}
+
+.sidebar .menu {
+  @apply ml-[10px] cursor-pointer block;
+}
+
+.sidebar .new-chat {
+  @apply mt-[50px] inline-flex items-center gap-[10px] py-[10px] px-[15px] bg-[#e6eaf1] rounded-[50px] text-[14px] text-[grey] cursor-pointer w-full;
+}
+
+.sidebar .recent {
+  @apply flex flex-col;
+  animation: fadeIn 1.5s;
+
+}
+
+.sidebar .recent-title {
+  @apply mt-[30px] mb-[20px];
+}
+
+.sidebar .recent-entry {
+  @apply flex items-center gap-[10px] p-[10px] space-x-[10px] rounded-[50px] text-[#282828] cursor-pointer capitalize;
+}
+
+.sidebar .recent-entry:hover {
+  @apply bg-[#e2e6eb];
+}
+
+.sidebar .bottom{
+    @apply flex flex-col
+}
+
+.sidebar .bottom-item {
+    @apply cursor-pointer pr-[10px]
+}
