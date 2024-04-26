@@ -15,7 +15,7 @@
 }
 
 .main .greet {
-  @apply md:my-[50px] mt-[50px] text-[20px] md:text-[56px] text-[#c4c7c5] p-[20px] pb-0 font-medium text-center md:text-left;
+  @apply md:my-[50px] mt-[50px] text-[20px] md:text-[56px] text-[#a7a7a7] p-[20px] pb-0 font-medium text-center md:text-left;
 }
 
 .main .greet span {
@@ -28,6 +28,11 @@
 .main .cards {
   grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
   @apply grid gap-[15px] p-5 font-jost;
+}
+
+.main .cards:has(.card:hover) .card:not(:hover){
+  opacity: 0.5;
+  filter: blur(80%);
 }
 
 @media (min-width: 768px) {
@@ -76,7 +81,7 @@
 }
 
 .search-box {
-  @apply flex items-center justify-between gap-[20px] bg-white py-[10px] px-[20px] rounded-[50px] h-auto border-gray-200 border-solid border;
+  @apply flex items-center justify-between gap-[20px] bg-white py-[5px] px-[20px] rounded-[50px] h-auto border-gray-200 border-solid border;
 }
 
 .search-box img {
