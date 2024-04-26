@@ -18,7 +18,7 @@ const Main = () => {
   return (
     <div className="main">
       <nav className="nav">
-        <p>Eric GPT</p>
+        <p>VirgoGPT 1.0</p>
         <img src={assets.user_icon} alt="" />
       </nav>
       <div className="main-container">
@@ -26,7 +26,7 @@ const Main = () => {
           <>
             <div className="greet">
               <p>
-                <span>Hello, Dev.</span>
+                <span>Hello, Dev👋</span>
               </p>
               <p>How can I help you today?</p>
             </div>

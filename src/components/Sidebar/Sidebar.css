@@ -1,9 +1,9 @@
 .sidebar {
-  @apply h-screen flex-col justify-between bg-[#f0f4f9] py-[25px] px-[15px] overflow-hidden hidden md:inline-flex;
+  @apply h-screen flex-col justify-between bg-[#f0f4f9] py-[25px] px-[15px] overflow-hidden hidden md:inline-flex font-poppins;
 }
 
 .sidebar img {
-  @apply w-[20px];
+  @apply w-[18px];
 }
 
 .sidebar .menu {
@@ -11,7 +11,11 @@
 }
 
 .sidebar .new-chat {
-  @apply mt-[50px] inline-flex items-center gap-[10px] py-[10px] px-[15px] bg-[#e6eaf1] rounded-[50px] text-[14px] text-[grey] cursor-pointer w-full;
+  @apply mt-[50px] inline-flex items-center gap-[10px] py-[10px] px-[15px] bg-[#e6eaf1] rounded-[50px] text-[16px] text-gray-600 cursor-pointer font-medium;
+}
+
+.sidebar .new-chat p {
+  @apply w-[150px]
 }
 
 .sidebar .recent {

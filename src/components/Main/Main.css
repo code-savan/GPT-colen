@@ -1,9 +1,9 @@
 .main {
-  @apply flex-1 h-screen relative overflow-hidden border border-solid;
+  @apply flex-1 h-screen relative overflow-hidden border border-solid font-poppins;
 }
 /* pb-[15vh] */
 .main .nav {
-  @apply flex items-center justify-between text-[22px] p-[20px] text-[#585858];
+  @apply flex items-center justify-between text-[22px] p-[20px] text-[#494949] font-semibold font-poppins;
 }
 
 .main .nav img {
@@ -15,7 +15,7 @@
 }
 
 .main .greet {
-  @apply my-[50px] text-[20px] md:text-[56px] text-[#c4c7c5] p-[20px] pb-0 font-medium text-center md:text-left;
+  @apply md:my-[50px] mt-[50px] text-[20px] md:text-[56px] text-[#c4c7c5] p-[20px] pb-0 font-medium text-center md:text-left;
 }
 
 .main .greet span {
@@ -27,7 +27,7 @@
 
 .main .cards {
   grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
-  @apply grid gap-[15px] p-5;
+  @apply grid gap-[15px] p-5 font-jost;
 }
 
 @media (min-width: 768px) {
@@ -37,8 +37,8 @@
 }
 
 .main .card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
-  @apply h-[150px] p-[15px] bg-[#f0f4f9] rounded-[10px] cursor-pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  @apply h-[140px] md:h-[160px] p-[15px] bg-[#f0f4f9] md:w-auto inline-flex w-auto rounded-[10px] relative cursor-pointer;
 }
 
 @media (min-width: 768px) {
@@ -76,7 +76,7 @@
 }
 
 .search-box {
-  @apply flex items-center justify-between gap-[20px] bg-[#f0f4f9] py-[10px] px-[20px] rounded-[50px] h-auto border-gray-200 border-solid border;
+  @apply flex items-center justify-between gap-[20px] bg-white py-[10px] px-[20px] rounded-[50px] h-auto border-gray-200 border-solid border;
 }
 
 .search-box img {
