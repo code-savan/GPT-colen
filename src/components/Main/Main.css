@@ -6,6 +6,38 @@
   @apply flex items-center justify-between text-[22px] p-[20px] text-[#494949] font-semibold font-poppins;
 }
 
+.main .nav .menu {
+  @apply space-y-[3px] md:hidden
+}
+
+.main .nav .menu div {
+  @apply bg-gray-800 h-[3px] w-[20px] rounded-md
+}
+
+.main .nav .menu div:nth-child(1) {
+  @apply w-[17px]
+}
+
+.new-chat {
+  @apply inline-flex items-center justify-between py-[6px] px-[15px] bg-[#eaecf0] rounded-[50px] text-[16px] text-gray-700 cursor-pointer font-medium w-full;
+}
+
+.drawer .recent {
+@apply font-medium font-poppins mt-10 text-[15px] text-gray-600
+}
+
+.new-chat div {
+  @apply flex items-center gap-[10px]
+}
+
+.new-chat img {
+  @apply w-[22px]
+}
+
+.main .nav .menu div:nth-child(3) {
+  @apply w-[14px]
+}
+
 .main .nav img {
   @apply w-[40px] rounded-full;
 }

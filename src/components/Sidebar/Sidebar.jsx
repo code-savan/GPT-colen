@@ -24,7 +24,7 @@ const Sidebar = () => {
 
         
           <div className="recent">
-            <p className="recent-title">Recent</p>
+          <p className="recent-title">{extended ? "Recent" : null}</p>
             {
               prevPrompts.map((prompt, index) => {
                 return (

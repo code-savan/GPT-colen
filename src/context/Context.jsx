@@ -173,7 +173,7 @@ const ContextProvider = (props) => {
   const delaypara = (index, nextWord) => {
     setTimeout(() => {
       setResultData((prev) => prev + nextWord);
-    }, 75 * index);
+    }, 35 * index);
   };
 
   const newChat = () => {

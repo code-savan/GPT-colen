@@ -1,7 +1,7 @@
 .sidebar {
-  @apply h-screen flex-col justify-between bg-[#f0f4f9] py-[25px] px-[15px] overflow-hidden hidden md:inline-flex font-poppins;
+  @apply h-screen flex-col justify-between bg-[#f0f4f9] py-[25px] px-[15px] overflow-hidden hidden  md:inline-flex font-poppins;
 }
-
+/* absolute z-40 md:static */
 .sidebar img {
   @apply w-[18px];
 }
@@ -25,7 +25,7 @@
 }
 
 .sidebar .recent-title {
-  @apply mt-[30px] mb-[20px];
+  @apply mt-[30px] mb-[20px] font-medium font-poppins text-[15px] text-gray-600;
 }
 
 .sidebar .recent-entry {

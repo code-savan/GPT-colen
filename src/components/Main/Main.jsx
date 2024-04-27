@@ -3,8 +3,20 @@ import { useContext } from "react";
 import { assets } from "../../assets/assets";
 import "./Main.css";
 import { Context } from "../../context/Context";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { CloseIcon, EditIcon } from "@chakra-ui/icons";
 
 const Main = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const {
     onSent,
     recentPrompt,
@@ -13,13 +25,48 @@ const Main = () => {
     resultData,
     setInput,
     input,
+    newChat
   } = useContext(Context);
+
 
   return (
     <div className="main">
       <nav className="nav">
-        <p>VirgoGPT 1.0</p>
+        <div className="menu" onClick={onOpen}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>VirgoGPT 1.1</p>
         <img src={assets.user_icon} alt="" />
+        <Drawer
+          placement={"left"}
+          size={"xs"}
+          onClick={onOpen}
+          onClose={onClose}
+          isOpen={isOpen}
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader className="flex justify-end">
+              <CloseIcon onClick={onClose} boxSize={4} className="mt-3" />
+            </DrawerHeader>
+            <DrawerBody className="px-0 p-0 m-0 drawer">
+              <div onClick={() => {
+                newChat();
+                onClose();
+              }} className="new-chat">
+                <div>
+                <img src={assets.plus_icon} alt="" />
+                <p> New Chat</p>
+                </div>
+                <EditIcon boxSize={5} />
+              </div>
+
+              <p className="recent">Recent</p>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </nav>
       <div className="main-container">
         {!showResult ? (
