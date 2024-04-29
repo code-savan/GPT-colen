@@ -109,27 +109,40 @@
 }
 
 .main-bottom {
-  @apply absolute bottom-0 left-0 right-0 w-full md:max-w-[900px] px-[20px] m-auto z-40 bg-white;
+  @apply absolute bottom-0 left-0 right-0 w-full md:max-w-[900px] px-[20px] m-auto z-40 bg-white h-auto;
 }
 
 .search-box {
-  @apply flex items-center justify-between gap-[20px] bg-white py-[5px] px-[20px] rounded-[50px] h-auto border-gray-200 border-solid border;
+  @apply flex items-center justify-between gap-[20px] bg-white py-[2px] px-[20px] rounded-[20px] h-auto border-gray-300 border-solid border relative;
 }
 
 .search-box img {
-  @apply w-[24px] cursor-pointer;
+  width: 24px; /* Adjust the width of the image as needed */
+  height: auto;
+  cursor: pointer; 
 }
 
-.search-box input {
-  @apply flex-1 bg-transparent border-none outline-none p-[8px] text-[18px] ;
+.search-box textarea {
+  @apply flex-1 bg-white border-none outline-none py-[14px] md:py-[12px] px-[10px] text-[18px];
+  resize: none; 
+  overflow-y: hidden; 
+  height: 50px; 
+  max-height: 200px;
+  padding-right: 45px;
 }
+
+
 
 .search-box div {
-  @apply flex items-center gap-[15px];
+  position: absolute;
+  /* bottom: 17px; */
+  right: 30px;
+  @apply bottom-[17px] md:bottom-[15px]
+
 }
 
 .main .bottom-info {
-  @apply text-[10px] md:text-[13px] my-[8px] mx-auto text-center font-medium md:font-light text-black;
+  @apply text-[10px] md:text-[13px] my-[8px] mx-auto text-center font-medium md:font-light text-black bg-white;
 }
 
 .result {
@@ -167,22 +180,31 @@
 }
 
 .result img {
-  @apply rounded-full w-[40px];
+  @apply rounded-full w-[30px];
 }
 
 .result-data {
-  @apply flex items-start gap-[20px];
+  @apply gap-[20px];
 }
 
 .loader {
-  @apply w-full flex flex-col gap-[10px];
+  @apply w-full flex flex-col gap-[15px] mt-3;
 }
 
 .loader hr {
-  @apply rounded-[4px] border-none animate-pulse bg-[#f6f7f8] h-[20px];
+  @apply rounded-[4px] rounded-r-lg border-none animate-pulse bg-[#f6f7f8] h-[25px];
   background: linear-gradient(to right, #9ed7ff, #cdf0f9, #9ed7ff);
   background-size: 800px 50px;
   animation: loader 3s infinite linear;
+}
+
+.loader hr:nth-child(1) {
+  @apply w-[90%];
+
+}
+.loader hr:nth-child(3) {
+  @apply w-[75%];
+
 }
 
 @keyframes loader {
@@ -195,6 +217,8 @@
 }
 
 .result-data p{
-    @apply text-[17px] font-light;
+    @apply text-[15px] md:text-[17px] font-light mt-[10px] max-w-full;
     line-height: 1.8;
 }
+
+

@@ -13,21 +13,29 @@ import message_icon from './message_icon.png'
 import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
 import gemini_icon from './gemini_icon.png'
+import logo from './gptlogo.png'
+import google from './google.png'
+import mail from './mail.png'
+import mobile_mail from './mobile-mail.png'
 
 export const assets = {
-    history_icon,
-    menu_icon,
-    plus_icon,
-    question_icon,
-    setting_icon,
-    bulb_icon,
-    compass_icon,
-    gallery_icon,
-    mic_icon,
-    user_icon,
-    youtube_icon,
-    message_icon,
-    code_icon,
-    send_icon,
-    gemini_icon
-}
+  history_icon,
+  menu_icon,
+  plus_icon,
+  question_icon,
+  setting_icon,
+  bulb_icon,
+  compass_icon,
+  gallery_icon,
+  mic_icon,
+  user_icon,
+  youtube_icon,
+  message_icon,
+  code_icon,
+  send_icon,
+  gemini_icon,
+  logo,
+  google,
+  mail,
+  mobile_mail
+};
